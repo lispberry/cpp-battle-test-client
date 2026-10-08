@@ -1,0 +1,11 @@
+// MARCH to the cell the unit already stands on ends the march on the unit's first idle turn, as in the original
+// prototype: unit 1 reports MARCH_ENDED in round 1; unit 3 first kills its neighbour, so its MARCH_ENDED comes in
+// round 2. Unit 2 marches normally. The recorded output is the prototype's, byte for byte.
+CREATE_MAP 10 10
+SPAWN_SWORDSMAN 1 3 3 10 1 0 0
+MARCH 1 3 3
+SPAWN_SWORDSMAN 2 8 8 10 1 0 0
+MARCH 2 8 6
+SPAWN_SWORDSMAN 3 0 0 10 5 0 0
+MARCH 3 0 0
+SPAWN_SWORDSMAN 4 1 0 1 1 0 0

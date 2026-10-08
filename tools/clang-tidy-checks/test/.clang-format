@@ -1,0 +1,2 @@
+# Fixtures are matched by line (`// EXPECT`), so their layout must stay exactly as written.
+DisableFormat: true

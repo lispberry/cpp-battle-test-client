@@ -1,0 +1,5 @@
+// Swordsman with Chance 1000: every strike is Rending instead of the normal attack (UNIT_ABILITY_USED, then the
+// Rending damage, 4, not Strength, 1). The other swordsman, Chance 0, only strikes for Strength.
+CREATE_MAP 5 5
+SPAWN_SWORDSMAN 1 1 1 12 1 1000 4
+SPAWN_SWORDSMAN 2 2 1 12 2 0 9

@@ -1,0 +1,6 @@
+// Poisoned arrows: Poison 7 is dealt over five rounds as 2 2 1 1 1, as damage of the hunter. The swordsman walks out
+// of range after the first shot, so exactly one poison runs; the battle ends when it has.
+CREATE_MAP 12 4
+SPAWN_SWORDSMAN 1 4 0 20 1 0 0
+MARCH 1 11 0
+SPAWN_HUNTER 2 0 0 10 3 1 5 1000 7

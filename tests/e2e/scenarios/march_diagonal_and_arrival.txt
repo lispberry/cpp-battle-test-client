@@ -1,0 +1,7 @@
+// Moving: one cell per turn into any of the 8 neighbours (diagonals first), continuing over later turns, and
+// MARCH_ENDED on arrival. A unit ordered to its own cell does not move and reports MARCH_ENDED on its first turn.
+CREATE_MAP 10 10
+SPAWN_SWORDSMAN 1 0 0 10 1 0 0
+MARCH 1 4 7
+SPAWN_SWORDSMAN 2 9 9 10 1 0 0
+MARCH 2 9 9

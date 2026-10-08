@@ -1,0 +1,12 @@
+[0] MAP_CREATED width=5 height=5 
+[0] UNIT_SPAWNED unitId=1 unitType=swordsman x=1 y=1 
+[0] UNIT_SPAWNED unitId=2 unitType=swordsman x=2 y=1 
+[1] UNIT_ABILITY_USED abilityUnitId=1 abilityName=rending 
+[1] UNIT_ATTACKED attackerUnitId=1 targetUnitId=2 damage=4 targetHp=8 
+[1] UNIT_ATTACKED attackerUnitId=2 targetUnitId=1 damage=2 targetHp=10 
+[2] UNIT_ABILITY_USED abilityUnitId=1 abilityName=rending 
+[2] UNIT_ATTACKED attackerUnitId=1 targetUnitId=2 damage=4 targetHp=4 
+[2] UNIT_ATTACKED attackerUnitId=2 targetUnitId=1 damage=2 targetHp=8 
+[3] UNIT_ABILITY_USED abilityUnitId=1 abilityName=rending 
+[3] UNIT_ATTACKED attackerUnitId=1 targetUnitId=2 damage=4 targetHp=0 
+[3] UNIT_DIED unitId=2 

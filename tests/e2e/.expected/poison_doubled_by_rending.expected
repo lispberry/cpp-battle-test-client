@@ -1,0 +1,30 @@
+[0] MAP_CREATED width=10 height=10 
+[0] UNIT_SPAWNED unitId=1 unitType=swordsman x=5 y=5 
+[0] UNIT_SPAWNED unitId=2 unitType=swordsman x=6 y=5 
+[0] UNIT_SPAWNED unitId=3 unitType=hunter x=2 y=5 
+[1] UNIT_ATTACKED attackerUnitId=1 targetUnitId=2 damage=1 targetHp=59 
+[1] UNIT_ABILITY_USED abilityUnitId=2 abilityName=rending 
+[1] UNIT_ATTACKED attackerUnitId=2 targetUnitId=1 damage=3 targetHp=57 
+[1] UNIT_ABILITY_USED abilityUnitId=3 abilityName=poison_arrows 
+[1] UNIT_ATTACKED attackerUnitId=3 targetUnitId=1 damage=2 targetHp=55 
+[2] UNIT_ATTACKED attackerUnitId=1 targetUnitId=2 damage=1 targetHp=58 
+[2] UNIT_ABILITY_USED abilityUnitId=2 abilityName=rending 
+[2] UNIT_ATTACKED attackerUnitId=2 targetUnitId=1 damage=3 targetHp=52 
+[2] UNIT_ABILITY_USED abilityUnitId=3 abilityName=poison_arrows 
+[2] UNIT_ATTACKED attackerUnitId=3 targetUnitId=1 damage=6 targetHp=46 
+[3] UNIT_ATTACKED attackerUnitId=1 targetUnitId=2 damage=1 targetHp=57 
+[3] UNIT_ABILITY_USED abilityUnitId=2 abilityName=rending 
+[3] UNIT_ATTACKED attackerUnitId=2 targetUnitId=1 damage=3 targetHp=43 
+[3] UNIT_ABILITY_USED abilityUnitId=3 abilityName=poison_arrows 
+[3] UNIT_ATTACKED attackerUnitId=3 targetUnitId=1 damage=10 targetHp=33 
+[4] UNIT_ATTACKED attackerUnitId=1 targetUnitId=2 damage=1 targetHp=56 
+[4] UNIT_ABILITY_USED abilityUnitId=2 abilityName=rending 
+[4] UNIT_ATTACKED attackerUnitId=2 targetUnitId=1 damage=3 targetHp=30 
+[4] UNIT_ABILITY_USED abilityUnitId=3 abilityName=poison_arrows 
+[4] UNIT_ATTACKED attackerUnitId=3 targetUnitId=1 damage=14 targetHp=16 
+[5] UNIT_ATTACKED attackerUnitId=1 targetUnitId=2 damage=1 targetHp=55 
+[5] UNIT_ABILITY_USED abilityUnitId=2 abilityName=rending 
+[5] UNIT_ATTACKED attackerUnitId=2 targetUnitId=1 damage=3 targetHp=13 
+[5] UNIT_ABILITY_USED abilityUnitId=3 abilityName=poison_arrows 
+[5] UNIT_ATTACKED attackerUnitId=3 targetUnitId=1 damage=16 targetHp=0 
+[5] UNIT_DIED unitId=1 

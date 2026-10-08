@@ -1,0 +1,5 @@
+// A dead unit frees its cell at once: the marching swordsman kills the one in its way and walks through its cell.
+CREATE_MAP 8 3
+SPAWN_SWORDSMAN 1 0 1 10 5 0 0
+MARCH 1 5 1
+SPAWN_SWORDSMAN 2 2 1 4 1 0 0

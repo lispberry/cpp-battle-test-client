@@ -1,0 +1,6 @@
+// Hunter: with a unit in an adjacent cell it may not shoot; it stabs the neighbour for Strength (3), never the
+// distant swordsman for Agility (5), and never uses poison arrows (ranged only).
+CREATE_MAP 10 10
+SPAWN_HUNTER 1 2 2 30 5 3 6 1000 10
+SPAWN_SWORDSMAN 2 3 2 9 1 0 0
+SPAWN_SWORDSMAN 3 6 2 20 1 0 0

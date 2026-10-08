@@ -1,0 +1,27 @@
+# https://lefthook.dev/configuration/
+# Install hooks once per clone: `lefthook install`
+# All checks live in tools/scripts/check.py; run any of them by hand with `uv run tools/scripts/check.py <command>`.
+pre-commit:
+  parallel: true
+  jobs:
+    - name: clang-format
+      glob: "*.{cpp,hpp,h,cc,cxx,hxx}"
+      run: uv run tools/scripts/check.py format
+
+    - name: clang-tidy
+      glob: "*.{cpp,hpp,h,cc,cxx,hxx}"
+      run: uv run tools/scripts/check.py tidy
+
+    - name: layers
+      glob: "*.{cpp,hpp,h,cc,cxx,hxx}"
+      run: uv run tools/scripts/check.py layers
+
+    - name: markdown
+      glob: "*.md"
+      run: uv run tools/scripts/check.py markdown
+
+# Slower: builds the coverage preset and runs every test. Every file in src/ must stay at 100% line and branch coverage.
+pre-push:
+  jobs:
+    - name: coverage
+      run: uv run tools/scripts/check.py coverage

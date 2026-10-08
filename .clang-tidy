@@ -1,0 +1,84 @@
+---
+# https://clang.llvm.org/extra/clang-tidy/checks/list.html
+#
+# readability-convert-member-functions-to-static is off: a component's handler (`on`) is called on the instance by the
+# engine, even when this one handler happens not to read the component's fields (Invulnerable, Flying).
+#
+# cppcoreguidelines-pro-bounds-avoid-unchecked-container-access is off: every build enables the standard library's
+# hardened mode (_LIBCPP_HARDENING_MODE_EXTENSIVE, _GLIBCXX_ASSERTIONS; see CMakeLists.txt), which bounds-checks
+# operator[] at run time, so rewriting each index as .at() would only add exceptions.
+Checks: >
+  -*,
+  bugprone-*,
+  cert-*,
+  clang-analyzer-*,
+  concurrency-*,
+  cppcoreguidelines-*,
+  hicpp-exception-baseclass,
+  hicpp-multiway-paths-covered,
+  hicpp-no-assembler,
+  misc-*,
+  modernize-*,
+  performance-*,
+  portability-*,
+  readability-*,
+  -bugprone-easily-swappable-parameters,
+  -cppcoreguidelines-avoid-magic-numbers,
+  -cppcoreguidelines-non-private-member-variables-in-classes,
+  -cppcoreguidelines-pro-bounds-pointer-arithmetic,
+  -cppcoreguidelines-pro-bounds-avoid-unchecked-container-access,
+  -misc-non-private-member-variables-in-classes,
+  -misc-no-recursion,
+  -modernize-use-trailing-return-type,
+  -modernize-use-nodiscard,
+  -readability-identifier-length,
+  -readability-magic-numbers,
+  -readability-braces-around-statements,
+  -readability-convert-member-functions-to-static,
+  -portability-avoid-pragma-once,
+  sw-include-style,
+  sw-constrained-templates,
+  sw-documented-api
+
+# Zero-warning policy: any finding fails the check.
+WarningsAsErrors: '*'
+HeaderFilterRegex: '.*/src/.*'
+FormatStyle: file
+SystemHeaders: false
+
+CheckOptions:
+  # SW_REFLECT is the one macro: declaring a type's fields from their identifiers needs the preprocessor until C++26.
+  - key: cppcoreguidelines-macro-usage.AllowedRegexp
+    value: '^SW_'
+  # Complexity limits (clang-tidy's closest equivalent to cyclomatic complexity).
+  - key: readability-function-cognitive-complexity.Threshold
+    value: 15
+  - key: readability-function-cognitive-complexity.IgnoreMacros
+    value: true
+  - key: readability-function-size.LineThreshold
+    value: 80
+  - key: readability-function-size.StatementThreshold
+    value: 60
+  - key: readability-function-size.BranchThreshold
+    value: 10
+  - key: readability-function-size.ParameterThreshold
+    value: 6
+  - key: readability-function-size.NestingThreshold
+    value: 4
+
+  # Unused / missing includes.
+  - key: misc-include-cleaner.IgnoreHeaders
+    value: ''
+
+  - key: cppcoreguidelines-special-member-functions.AllowSoleDefaultDtor
+    value: true
+  - key: performance-unnecessary-value-param.AllowedTypes
+    value: ''
+  - key: readability-implicit-bool-conversion.AllowPointerConditions
+    value: true
+
+  # "pointee can be declared const" cannot be satisfied by main(int, char**),
+  # whose signature is fixed by the standard. Value and reference
+  # const-correctness stay on.
+  - key: misc-const-correctness.WarnPointersAsPointers
+    value: false

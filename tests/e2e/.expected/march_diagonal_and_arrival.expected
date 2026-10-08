@@ -1,0 +1,14 @@
+[0] MAP_CREATED width=10 height=10 
+[0] UNIT_SPAWNED unitId=1 unitType=swordsman x=0 y=0 
+[0] MARCH_STARTED unitId=1 x=0 y=0 targetX=4 targetY=7 
+[0] UNIT_SPAWNED unitId=2 unitType=swordsman x=9 y=9 
+[0] MARCH_STARTED unitId=2 x=9 y=9 targetX=9 targetY=9 
+[1] UNIT_MOVED unitId=1 x=1 y=1 
+[1] MARCH_ENDED unitId=2 x=9 y=9 
+[2] UNIT_MOVED unitId=1 x=2 y=2 
+[3] UNIT_MOVED unitId=1 x=3 y=3 
+[4] UNIT_MOVED unitId=1 x=4 y=4 
+[5] UNIT_MOVED unitId=1 x=4 y=5 
+[6] UNIT_MOVED unitId=1 x=4 y=6 
+[7] UNIT_MOVED unitId=1 x=4 y=7 
+[7] MARCH_ENDED unitId=1 x=4 y=7 

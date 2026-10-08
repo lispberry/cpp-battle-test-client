@@ -1,0 +1,5 @@
+# Recorded test output is compared byte for byte; keep it LF on every platform.
+tests/e2e/** text eol=lf
+
+*.sh text eol=lf
+*.ps1 text eol=crlf

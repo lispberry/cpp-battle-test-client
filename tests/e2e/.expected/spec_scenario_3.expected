@@ -1,0 +1,24 @@
+[0] MAP_CREATED width=10 height=10 
+[0] UNIT_SPAWNED unitId=1 unitType=swordsman x=5 y=5 
+[0] UNIT_SPAWNED unitId=2 unitType=swordsman x=5 y=7 
+[0] MARCH_STARTED unitId=2 x=5 y=7 targetX=5 targetY=2 
+[1] UNIT_MOVED unitId=2 x=5 y=6 
+[2] UNIT_ATTACKED attackerUnitId=1 targetUnitId=2 damage=1 targetHp=9 
+[2] UNIT_ATTACKED attackerUnitId=2 targetUnitId=1 damage=1 targetHp=9 
+[3] UNIT_ATTACKED attackerUnitId=1 targetUnitId=2 damage=1 targetHp=8 
+[3] UNIT_ATTACKED attackerUnitId=2 targetUnitId=1 damage=1 targetHp=8 
+[4] UNIT_ATTACKED attackerUnitId=1 targetUnitId=2 damage=1 targetHp=7 
+[4] UNIT_ATTACKED attackerUnitId=2 targetUnitId=1 damage=1 targetHp=7 
+[5] UNIT_ATTACKED attackerUnitId=1 targetUnitId=2 damage=1 targetHp=6 
+[5] UNIT_ATTACKED attackerUnitId=2 targetUnitId=1 damage=1 targetHp=6 
+[6] UNIT_ATTACKED attackerUnitId=1 targetUnitId=2 damage=1 targetHp=5 
+[6] UNIT_ATTACKED attackerUnitId=2 targetUnitId=1 damage=1 targetHp=5 
+[7] UNIT_ATTACKED attackerUnitId=1 targetUnitId=2 damage=1 targetHp=4 
+[7] UNIT_ABILITY_USED abilityUnitId=2 abilityName=rending 
+[7] UNIT_ATTACKED attackerUnitId=2 targetUnitId=1 damage=5 targetHp=0 
+[7] UNIT_DIED unitId=1 
+[8] UNIT_MOVED unitId=2 x=5 y=5 
+[9] UNIT_MOVED unitId=2 x=5 y=4 
+[10] UNIT_MOVED unitId=2 x=5 y=3 
+[11] UNIT_MOVED unitId=2 x=5 y=2 
+[11] MARCH_ENDED unitId=2 x=5 y=2 

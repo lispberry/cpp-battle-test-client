@@ -1,0 +1,6 @@
+// Two hunters poison one unit: at each round end there is one UNIT_ATTACKED per hunter with that hunter's total, and
+// the hp in the records goes down from one to the next.
+CREATE_MAP 12 3
+SPAWN_HUNTER 1 0 1 30 1 1 4 1000 10
+SPAWN_SWORDSMAN 2 4 1 30 1 0 0
+SPAWN_HUNTER 3 8 1 30 1 1 4 1000 5

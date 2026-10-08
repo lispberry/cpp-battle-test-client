@@ -1,0 +1,10 @@
+[0] MAP_CREATED width=6 height=6 
+[0] UNIT_SPAWNED unitId=1 unitType=swordsman x=1 y=1 
+[0] UNIT_SPAWNED unitId=2 unitType=swordsman x=2 y=1 
+[0] UNIT_SPAWNED unitId=3 unitType=swordsman x=5 y=5 
+[0] MARCH_STARTED unitId=3 x=5 y=5 targetX=5 targetY=3 
+[1] UNIT_ATTACKED attackerUnitId=1 targetUnitId=2 damage=5 targetHp=0 
+[1] UNIT_DIED unitId=2 
+[1] UNIT_MOVED unitId=3 x=5 y=4 
+[2] UNIT_MOVED unitId=3 x=5 y=3 
+[2] MARCH_ENDED unitId=3 x=5 y=3 

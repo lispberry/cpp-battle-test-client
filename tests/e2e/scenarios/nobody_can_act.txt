@@ -1,0 +1,5 @@
+// The simulation ends when no unit can act: two hunters out of each other's range (2..3, 6 cells apart) and without
+// march orders never act, so the log is only the setup.
+CREATE_MAP 10 10
+SPAWN_HUNTER 1 0 0 10 1 1 3 0 0
+SPAWN_HUNTER 2 6 0 10 1 1 3 0 0

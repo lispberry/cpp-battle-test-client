@@ -1,0 +1,39 @@
+[0] MAP_CREATED width=10 height=10 
+[0] UNIT_SPAWNED unitId=1 unitType=swordsman x=5 y=1 
+[0] UNIT_SPAWNED unitId=2 unitType=hunter x=2 y=2 
+[0] MARCH_STARTED unitId=1 x=5 y=1 targetX=5 targetY=8 
+[0] MARCH_STARTED unitId=2 x=2 y=2 targetX=6 targetY=6 
+[0] UNIT_SPAWNED unitId=3 unitType=swordsman x=8 y=4 
+[0] MARCH_STARTED unitId=3 x=8 y=4 targetX=1 targetY=4 
+[1] UNIT_MOVED unitId=1 x=5 y=2 
+[1] UNIT_ATTACKED attackerUnitId=2 targetUnitId=1 damage=1 targetHp=4 
+[1] UNIT_MOVED unitId=3 x=7 y=4 
+[2] UNIT_MOVED unitId=1 x=5 y=3 
+[2] UNIT_ATTACKED attackerUnitId=2 targetUnitId=1 damage=1 targetHp=3 
+[2] UNIT_MOVED unitId=3 x=6 y=4 
+[3] UNIT_ATTACKED attackerUnitId=1 targetUnitId=3 damage=2 targetHp=8 
+[3] UNIT_ATTACKED attackerUnitId=2 targetUnitId=1 damage=1 targetHp=2 
+[3] UNIT_ATTACKED attackerUnitId=3 targetUnitId=1 damage=1 targetHp=1 
+[4] UNIT_ATTACKED attackerUnitId=1 targetUnitId=3 damage=2 targetHp=6 
+[4] UNIT_ATTACKED attackerUnitId=2 targetUnitId=1 damage=1 targetHp=0 
+[4] UNIT_DIED unitId=1 
+[4] UNIT_MOVED unitId=3 x=5 y=4 
+[5] UNIT_ATTACKED attackerUnitId=2 targetUnitId=3 damage=1 targetHp=5 
+[5] UNIT_MOVED unitId=3 x=4 y=4 
+[6] UNIT_ATTACKED attackerUnitId=2 targetUnitId=3 damage=1 targetHp=4 
+[6] UNIT_MOVED unitId=3 x=3 y=4 
+[7] UNIT_ATTACKED attackerUnitId=2 targetUnitId=3 damage=1 targetHp=3 
+[7] UNIT_MOVED unitId=3 x=2 y=4 
+[8] UNIT_ATTACKED attackerUnitId=2 targetUnitId=3 damage=1 targetHp=2 
+[8] UNIT_MOVED unitId=3 x=1 y=4 
+[8] MARCH_ENDED unitId=3 x=1 y=4 
+[9] UNIT_ABILITY_USED abilityUnitId=2 abilityName=poison_arrows 
+[9] UNIT_ATTACKED attackerUnitId=2 targetUnitId=3 damage=1 targetHp=1 
+[10] UNIT_ABILITY_USED abilityUnitId=2 abilityName=poison_arrows 
+[10] UNIT_ATTACKED attackerUnitId=2 targetUnitId=3 damage=1 targetHp=0 
+[10] UNIT_DIED unitId=3 
+[11] UNIT_MOVED unitId=2 x=3 y=3 
+[12] UNIT_MOVED unitId=2 x=4 y=4 
+[13] UNIT_MOVED unitId=2 x=5 y=5 
+[14] UNIT_MOVED unitId=2 x=6 y=6 
+[14] MARCH_ENDED unitId=2 x=6 y=6 

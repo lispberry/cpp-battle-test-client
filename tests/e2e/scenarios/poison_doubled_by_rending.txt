@@ -1,0 +1,7 @@
+// Poison and Rending: the hunter (only the victim, 3 cells away, is in its range) poisons unit 1 every round, and
+// the swordsman next to it always rends (Chance 1000). A poison's portion is doubled in a round in which the
+// poisoned unit takes Rending after the poison landed.
+CREATE_MAP 10 10
+SPAWN_SWORDSMAN 1 5 5 60 1 0 0
+SPAWN_SWORDSMAN 2 6 5 60 1 1000 3
+SPAWN_HUNTER 3 2 5 30 1 1 3 1000 10

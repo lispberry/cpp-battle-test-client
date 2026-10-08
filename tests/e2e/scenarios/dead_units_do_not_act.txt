@@ -1,0 +1,7 @@
+// Units act in creation order and the dead do not act: unit 1 kills its only neighbour, unit 2, before unit 2's turn
+// in round 1, so unit 2 never strikes back (its 9 damage never shows). Unit 3, created later and alive, still acts.
+CREATE_MAP 6 6
+SPAWN_SWORDSMAN 1 1 1 20 5 0 0
+SPAWN_SWORDSMAN 2 2 1 5 9 0 0
+SPAWN_SWORDSMAN 3 5 5 20 1 0 0
+MARCH 3 5 3

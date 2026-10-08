@@ -1,0 +1,62 @@
+# Builds sw_battle_test and runs the e2e tests (tests/) on Linux, macOS and Windows.
+# Each job calls the same per-platform script a developer runs locally: tools/scripts/<os>/test.{sh,ps1} <preset>.
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: ${{ matrix.name }} (${{ matrix.preset }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - { name: Linux, os: ubuntu-24.04, preset: debug, script: tools/scripts/linux/test.sh }
+          - { name: Linux, os: ubuntu-24.04, preset: release, script: tools/scripts/linux/test.sh }
+          - { name: Linux, os: ubuntu-24.04, preset: asan, script: tools/scripts/linux/test.sh }
+          - { name: macOS, os: macos-15, preset: debug, script: tools/scripts/mac/test.sh }
+          - { name: macOS, os: macos-15, preset: release, script: tools/scripts/mac/test.sh }
+          - { name: macOS, os: macos-15, preset: asan, script: tools/scripts/mac/test.sh }
+          - { name: Windows, os: windows-2025, preset: debug, script: tools/scripts/win/test.ps1 }
+          - { name: Windows, os: windows-2025, preset: release, script: tools/scripts/win/test.ps1 }
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build and test
+        if: runner.os != 'Windows'
+        run: ${{ matrix.script }} ${{ matrix.preset }}
+
+      - name: Build and test
+        if: runner.os == 'Windows'
+        shell: pwsh
+        run: ${{ matrix.script }} -Preset ${{ matrix.preset }}
+
+      - name: Upload actual e2e output
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: e2e-actual-${{ matrix.name }}-${{ matrix.preset }}
+          path: build/${{ matrix.preset }}/tests/*.actual
+          if-no-files-found: ignore
+
+  coverage:
+    # Clang source-based coverage with Xcode's toolchain: every file in src/ must have 100% line and branch coverage.
+    name: Coverage (macOS)
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Coverage
+        run: python3 tools/scripts/check.py coverage

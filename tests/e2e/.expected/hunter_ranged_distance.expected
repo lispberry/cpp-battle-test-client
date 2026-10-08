@@ -1,0 +1,8 @@
+[0] MAP_CREATED width=12 height=12 
+[0] UNIT_SPAWNED unitId=1 unitType=hunter x=0 y=0 
+[0] UNIT_SPAWNED unitId=2 unitType=swordsman x=5 y=0 
+[0] UNIT_SPAWNED unitId=3 unitType=swordsman x=0 y=6 
+[1] UNIT_ATTACKED attackerUnitId=1 targetUnitId=2 damage=2 targetHp=4 
+[2] UNIT_ATTACKED attackerUnitId=1 targetUnitId=2 damage=2 targetHp=2 
+[3] UNIT_ATTACKED attackerUnitId=1 targetUnitId=2 damage=2 targetHp=0 
+[3] UNIT_DIED unitId=2 
